@@ -2,7 +2,6 @@ package utils
 
 import (
 	"fmt"
-	"goinaction/utils"
 	"log"
 	"testing"
 )
@@ -59,7 +58,7 @@ func TestFuture2(t *testing.T) {
 		if boilRet1 != nil && addRet != nil {
 			break
 		} else {
-			utils.Sleep(500)
+			Sleep(500)
 		}
 	}
 }
@@ -73,7 +72,7 @@ func TestFuture3(t *testing.T) {
 		log.Println("boil goal result:", boilRet[0])
 		addRet := addFuture.GetNow(0, "fail")
 		log.Println("add goal result:", addRet[0], addRet[1])
-		utils.Sleep(500)
+		Sleep(500)
 	}
 }
 
